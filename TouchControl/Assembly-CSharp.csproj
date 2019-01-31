@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Control.cs" />
+    <Compile Include="Assets\Zoom.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/emtmc/RiderProjects/Games_for_mobile_devices/TouchControl/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
