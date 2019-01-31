@@ -48,5 +48,6 @@ public class Control : MonoBehaviour
         
         //Accelerator Movement
         //transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
+        transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
     }
 }
