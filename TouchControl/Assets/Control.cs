@@ -44,10 +44,6 @@ public class Control : MonoBehaviour
         if (dragging && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)) {
             dragging = false;
         }
-        
-        
-        //Accelerator Movement
-        //transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
-        //transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
+  
     }
 }
