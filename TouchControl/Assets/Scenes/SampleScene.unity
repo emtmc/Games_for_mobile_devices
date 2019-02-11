@@ -192,10 +192,6 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
-  - component: {fileID: 534669906}
-  - component: {fileID: 534669907}
-  - component: {fileID: 534669908}
-  - component: {fileID: 534669909}
   - component: {fileID: 534669910}
   m_Layer: 0
   m_Name: Main Camera
@@ -268,62 +264,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &534669906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a98977eca953e340a9eeb649734725b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perspectiveZoomSpeed: 0.5
-  orthoZoomSpeed: 0.5
-  cam: {fileID: 0}
---- !u!114 &534669907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152c0aa81fb7c1a47876ca41e540244e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &534669908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8505ce5a058ebc04f9c930199e6c887c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
---- !u!114 &534669909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edacd962e9bf8049a1b77fdf287f43f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gObj: {fileID: 0}
-  perspectiveZoomSpeed: 0.5
-  orthoZoomSpeed: 0.05
-  obj: {fileID: 0}
 --- !u!114 &534669910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d24230c1224c96b0d4199ca67b1f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perspectiveZoomSpeed: 0.5
+  orthoZoomSpeed: 0.05
   selected: {fileID: 0}
 --- !u!1 &835364912
 GameObject:
@@ -349,10 +291,8 @@ GameObject:
   - component: {fileID: 835364916}
   - component: {fileID: 835364915}
   - component: {fileID: 835364914}
-  - component: {fileID: 835364913}
-  - component: {fileID: 835364918}
-  - component: {fileID: 835364919}
   - component: {fileID: 835364920}
+  - component: {fileID: 835364913}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -367,12 +307,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835364912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8505ce5a058ebc04f9c930199e6c887c, type: 3}
+  m_Script: {fileID: 11500000, guid: c2dd2de30d278d544967cb139a5d192c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 534669910}
 --- !u!135 &835364914
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -445,38 +384,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &835364918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835364912}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430904f93e0287c44a9882f1a42013b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perspectiveZoomSpeed: 0.5
-  orthoZoomSpeed: 0.05
-  sphere: {fileID: 0}
-  cam: {fileID: 0}
---- !u!114 &835364919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835364912}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edacd962e9bf8049a1b77fdf287f43f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gObj: {fileID: 0}
-  perspectiveZoomSpeed: 0.5
-  orthoZoomSpeed: 0.05
-  obj: {fileID: 0}
 --- !u!114 &835364920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,10 +396,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26263de46c745a78b3de677514954bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perspectiveZoomSpeed: 0.5
-  orthoZoomSpeed: 0.05
   sphere: {fileID: 0}
   cam: {fileID: 534669910}
+  orthoZoomSpeed: 0.05
 --- !u!1 &965439656
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,9 +411,8 @@ GameObject:
   - component: {fileID: 965439660}
   - component: {fileID: 965439659}
   - component: {fileID: 965439658}
-  - component: {fileID: 965439657}
   - component: {fileID: 965439662}
-  - component: {fileID: 965439663}
+  - component: {fileID: 965439657}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -524,10 +429,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 965439656}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8505ce5a058ebc04f9c930199e6c887c, type: 3}
+  m_Script: {fileID: 11500000, guid: c2dd2de30d278d544967cb139a5d192c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
 --- !u!65 &965439658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -612,23 +516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26263de46c745a78b3de677514954bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perspectiveZoomSpeed: 0.5
-  orthoZoomSpeed: 0.05
   sphere: {fileID: 0}
   cam: {fileID: 534669910}
---- !u!114 &965439663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965439656}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430904f93e0287c44a9882f1a42013b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perspectiveZoomSpeed: 0.5
   orthoZoomSpeed: 0.05
-  sphere: {fileID: 0}
-  cam: {fileID: 534669910}
