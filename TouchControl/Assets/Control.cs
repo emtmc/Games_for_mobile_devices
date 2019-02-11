@@ -6,7 +6,6 @@ public class Control : MonoBehaviour
 {
     private float dist;
     private bool dragging = false;
-    private bool pinch = false;
     private Transform toDrag;
     private bool isTap;
     public Selector cam;
