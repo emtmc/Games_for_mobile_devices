@@ -58,9 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Accelerometer.cs" />
+    <Compile Include="Assets\ColorOnSelect.cs" />
     <Compile Include="Assets\Control.cs" />
     <Compile Include="Assets\gyroTest.cs" />
+    <Compile Include="Assets\rotate.cs" />
     <Compile Include="Assets\Scale.cs" />
+    <Compile Include="Assets\Selectable.cs" />
+    <Compile Include="Assets\Selector.cs" />
+    <Compile Include="Assets\Test.cs" />
     <Compile Include="Assets\Zoom.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/emtmc/RiderProjects/Games_for_mobile_devices/TouchControl/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
