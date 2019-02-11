@@ -4,11 +4,11 @@ public class Zoom : MonoBehaviour
 {
     public float perspectiveZoomSpeed = 0.5f;        // The rate of change of the field of view in perspective mode.
     public float orthoZoomSpeed = 0.5f;        // The rate of change of the orthographic size in orthographic mode.
- public Camera cam;
+    public Camera camera;
  
  void Start()
  {
-  cam = GetComponent<Camera>();
+  camera = GetComponent<Camera>();
  }
 
     void Update()
@@ -32,21 +32,21 @@ public class Zoom : MonoBehaviour
             float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
             // If the camera is orthographic...
-            if (cam.orthographic)
+            if (camera.orthographic)
             {
                 // ... change the orthographic size based on the change in distance between the touches.
-                cam.orthographicSize += deltaMagnitudeDiff * orthoZoomSpeed;
+                camera.orthographicSize += deltaMagnitudeDiff * orthoZoomSpeed;
 
                 // Make sure the orthographic size never drops below zero.
-                cam.orthographicSize = Mathf.Max(cam.orthographicSize, 0.1f);
+                camera.orthographicSize = Mathf.Max(camera.orthographicSize, 0.1f);
             }
             else
             {
                 // Otherwise change the field of view based on the change in distance between the touches.
-                cam.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
+                camera.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
 
                 // Clamp the field of view to make sure it's between 0 and 180.
-                cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 0.1f, 179.9f);
+                camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
             }
         }
     }
