@@ -13,7 +13,9 @@ public class ColorOnSelect : Selectable
     private Transform toDrag;
     private bool isTap;
     private bool isSelected = false;
-    public float orthoZoomSpeed = 0.050f;        // The rate of change of the orthographic size in orthographic mode.
+    public float orthoZoomSpeed = 0.050f;   
+    public float rotationRate = 1f;
+    public bool wasRotating;
     
     void Start()
     {
@@ -100,6 +102,31 @@ public class ColorOnSelect : Selectable
             if (dragging && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
             {
                 dragging = false;
+            }
+        }
+    }
+
+
+    public override void rotateObj()
+    {
+        if (isSelected == true)
+        {
+            if (Input.touchCount == 2)
+            {
+                  Touch touchzero = Input.GetTouch(0);
+                  Touch touchone = Input.GetTouch(1);
+
+                if (Input.touches[0].phase == TouchPhase.Began)
+                {
+                    wasRotating = false;
+                }
+
+                if (Input.touches[0].phase == TouchPhase.Moved)
+                {
+                    transform.Rotate(0, Input.touches[0].deltaPosition.x * rotationRate, 0, Space.World);
+                    wasRotating = true;
+                }
+            
             }
         }
     }

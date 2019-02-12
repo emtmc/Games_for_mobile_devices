@@ -8,5 +8,6 @@ public abstract class Selectable : MonoBehaviour
     public abstract void onDeselect();
     public abstract void scale();
     public abstract void move();
+    public abstract void rotateObj();
 }
 

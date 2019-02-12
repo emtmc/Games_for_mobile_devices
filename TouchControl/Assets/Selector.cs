@@ -6,7 +6,7 @@ using UnityEngine;
 public class Selector : MonoBehaviour
 {
     private Camera cam = null;
-    public float perspectiveZoomSpeed = 0.5f;        // The rate of change of the field of view in perspective mode.
+    public float perspectiveZoomSpeed = 0.05f;        // The rate of change of the field of view in perspective mode.
     public float orthoZoomSpeed = 0.050f;        // The rate of change of the orthographic size in orthographic mode.
     public Selectable selected = null;
     private bool gyroEnabled;
@@ -14,7 +14,8 @@ public class Selector : MonoBehaviour
     private GameObject cameraContainer;
     private Quaternion rot;
     public float speed = 0.1F;
-    
+    public float rotationRate = 1f;
+    public bool wasRotating;
     public void Start()
     {
         cam = this.GetComponent<Camera>();
@@ -30,11 +31,13 @@ public class Selector : MonoBehaviour
         {
         selected.scale();
         selected.move();
+        selected.rotateObj();
         }
         else
         {
         Zoom();
         CameraMove();
+        rotate();
        // Accelerometer();
        // Gyroscope();
         }
@@ -153,5 +156,26 @@ public class Selector : MonoBehaviour
                     -touchDeltaPosition.y * speed * Time.deltaTime, 0);
             }
         }
-    }    
+    }
+
+    void rotate()
+    {
+        if (Input.touchCount == 2)
+        {
+          //  Touch touchzero = Input.GetTouch(0);
+          //  Touch touchone = Input.GetTouch(1);
+
+            if (Input.touches[0].phase == TouchPhase.Began)
+            {
+                wasRotating = false;
+            }
+
+            if (Input.touches[0].phase == TouchPhase.Moved)
+            {
+                transform.Rotate(0, Input.touches[0].deltaPosition.x * rotationRate, 0, Space.World);
+                wasRotating = true;
+            }
+            
+        }
+    }
 }
