@@ -258,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -5.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -279,6 +279,9 @@ MonoBehaviour:
   perspectiveZoomSpeed: 0.5
   orthoZoomSpeed: 0.05
   selected: {fileID: 0}
+  speed: 0.1
+  rotationRate: 1
+  wasRotating: 0
 --- !u!1 &835364912
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835364912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.33, y: 0.01, z: -0.96}
+  m_LocalPosition: {x: -1.84, y: 0.88, z: -0.96}
   m_LocalScale: {x: 1.4539, y: 1.4539, z: 1.4539}
   m_Children: []
   m_Father: {fileID: 0}
@@ -399,6 +402,8 @@ MonoBehaviour:
   sphere: {fileID: 0}
   cam: {fileID: 534669910}
   orthoZoomSpeed: 0.05
+  rotationRate: 1
+  wasRotating: 0
 --- !u!1 &965439656
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965439656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81999993, y: 0, z: -0.49}
+  m_LocalPosition: {x: 0.85, y: 0.85, z: -0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -519,3 +524,5 @@ MonoBehaviour:
   sphere: {fileID: 0}
   cam: {fileID: 534669910}
   orthoZoomSpeed: 0.05
+  rotationRate: 1
+  wasRotating: 0
