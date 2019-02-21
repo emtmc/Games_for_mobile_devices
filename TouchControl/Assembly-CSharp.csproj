@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraClass.cs" />
-    <Compile Include="Assets\DetectTouchMovement.cs" />
     <Compile Include="Assets\Object.cs" />
     <Compile Include="Assets\Selectable.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

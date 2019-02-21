@@ -14,7 +14,7 @@ public class Object : Selectable
     private bool isTap;
     private bool isSelected = false;
     public float orthoZoomSpeed = 0.050f;   
-    public float rotationRate =     5f;
+    public float rotationRate = 5f;
     public bool wasRotating;
     
     void Start()
@@ -131,16 +131,16 @@ public class Object : Selectable
         float pinchAmount = 0;
         Quaternion desiredRotation = transform.rotation;
  
-        DetectTouchMovement.Calculate();
+        CameraClass.Calculate();
  
-        if (Mathf.Abs(DetectTouchMovement.pinchDistanceDelta) > 0) { // zoom
-            pinchAmount = DetectTouchMovement.pinchDistanceDelta;
+        if (Mathf.Abs(CameraClass.pinchDistanceDelta) > 0) { // zoom
+            pinchAmount = CameraClass.pinchDistanceDelta;
             scale();
         }
  
-        if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0) { // rotate
+        if (Mathf.Abs(CameraClass.turnAngleDelta) > 0) { // rotate
             Vector3 rotationDeg = Vector3.zero;
-            rotationDeg.z = -DetectTouchMovement.turnAngleDelta;
+            rotationDeg.z = -CameraClass.turnAngleDelta;
             desiredRotation *= Quaternion.Euler(rotationDeg);
             rotateObj();
         }
